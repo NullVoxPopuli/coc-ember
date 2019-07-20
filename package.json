@@ -20,7 +20,11 @@
     "prepare": "npx npm-run-all clean build:js"
   },
   "activationEvents": [
-    "onLanguage:ember"
+    "onLanguage:hbs",
+    "onLanguage:html.handlebars",
+    "onLanguage:handlebars",
+    "onLanguage:typescript",
+    "onLanguage:javascript"
   ],
   "contributes": {
     "configuration": {
