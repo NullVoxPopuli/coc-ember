@@ -8,17 +8,7 @@ import {
   services,
   TransportKind,
   LanguageClientOptions,
-  ProvideCompletionItemsSignature,
 } from 'coc.nvim';
-import {
-  TextDocument,
-  Position,
-  CompletionItem,
-  CompletionList,
-  InsertTextFormat,
-} from 'vscode-languageserver-protocol';
-import { CompletionContext } from 'vscode-languageserver-protocol';
-import { CancellationToken } from 'vscode-jsonrpc';
 
 const languageServerPath = './node_modules/@emberwatch/ember-language-server';
 const serverBin = 'lib/start-server.js';
