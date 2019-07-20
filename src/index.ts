@@ -1,4 +1,5 @@
 import execa from 'execa';
+import path from 'path';
 
 import {
   ExtensionContext,
@@ -10,39 +11,56 @@ import {
   LanguageClientOptions,
 } from 'coc.nvim';
 
-const languageServerPath = './node_modules/@emberwatch/ember-language-server';
-const serverBin = 'lib/start-server.js';
+const languageServerPath = [
+  'node_modules',
+  '@emberwatch',
+  'ember-language-server',
+];
+const serverBin = ['lib', 'start-server.js'];
 
 export async function activate(context: ExtensionContext): Promise<void> {
-  console.log('attempting to activate coc-ember')
   let config = getConfig();
-  console.log('config', config);
-  console.info('config', config);
 
   if (config.enable === false) return;
 
   let isEmberCli = await isEmberCliProject();
-  console.info('isEmberCli', isEmberCli);
   if (!isEmberCli) {
     return;
   }
 
-  let devPath = config.dev && config.dev.lsPath;
-  let lsPath = devPath || languageServerPath;
-  let serverBinFile = `${lsPath}/${serverBin}`;
+  let binPath = context.asAbsolutePath(
+    path.join(...languageServerPath, ...serverBin)
+  );
 
-  await checkRequirements(lsPath);
+  let repoPath = context.asAbsolutePath(path.join(...languageServerPath));
 
-  const serverOptions: ServerOptions = {
-    module: serverBinFile,
-    args: ['--node-ipc'],
-    transport: TransportKind.ipc,
-    options: {
-      cwd: workspace.root,
-      // TODO: for debugging the language server
-      execArgv: config.execArgv || [],
+  await checkRequirements(repoPath, binPath);
+
+  // The debug options for the server
+  let debugOptions = { execArgv: ['--nolazy', '--inspect=6004'] };
+
+  // If the extension is launched in debug mode then the debug
+  // server options are used...
+  // Otherwise the run options are used
+  let serverOptions: ServerOptions = {
+    run: { module: binPath, transport: TransportKind.ipc },
+    debug: {
+      module: binPath,
+      transport: TransportKind.ipc,
+      options: debugOptions,
     },
   };
+
+  // const serverOptions: ServerOptions = {
+  //   module: serverBinFile,
+  //   args: ['--node-ipc'],
+  //   transport: TransportKind.ipc,
+  //   options: {
+  //     cwd: workspace.root,
+  //     // TODO: for debugging the language server
+  //     execArgv: config.execArgv || [],
+  //   },
+  // };
 
   let clientOptions = buildClientOptions();
 
@@ -83,10 +101,10 @@ async function isEmberCliProject(): Promise<boolean> {
   return !!emberCliBuildFile;
 }
 
-async function checkRequirements(languageServerPath: string): Promise<void> {
-  let repoLocation = `${languageServerPath}/ember-language-server`;
-  let binPath = `${repoLocation}/${serverBin}`;
-
+async function checkRequirements(
+  repoPath: string,
+  binPath: string
+): Promise<void> {
   let isAlreadyBuilt = doesFileExist(binPath);
 
   if (isAlreadyBuilt) {
@@ -94,7 +112,7 @@ async function checkRequirements(languageServerPath: string): Promise<void> {
   }
 
   await execa.command(`yarn`, {
-    cwd: repoLocation,
+    cwd: repoPath,
   });
 }
 
