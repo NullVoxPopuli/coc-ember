@@ -14,7 +14,9 @@ const languageServerPath = './node_modules/@emberwatch/ember-language-server';
 const serverBin = 'lib/start-server.js';
 
 export async function activate(context: ExtensionContext): Promise<void> {
+  console.log('attempting to activate coc-ember')
   let config = getConfig();
+  console.info('config', config);
 
   if (config.enable === false) return;
 
