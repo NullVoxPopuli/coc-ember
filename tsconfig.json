@@ -12,5 +12,8 @@
     "plugins": []
   },
   "include": ["src"],
-  "exclude": []
+  "exclude": [
+    ".eslintrc.js",
+    ".prettierrc.js"
+  ]
 }

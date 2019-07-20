@@ -23,6 +23,10 @@ module.exports = {
     'no-console': 'warn',
     'no-cond-assign': 'off',
     'no-useless-escape': 'off',
+    'prefer-const': 'off',
+
+    // doesn't matter if we don't execude code in module-space
+    '@typescript-eslint/no-use-before-define': 'off',
   },
   overrides: [
     {
