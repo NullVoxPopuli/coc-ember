@@ -17,7 +17,10 @@ export async function activate(context: ExtensionContext): Promise<void> {
   let config = getConfig();
 
   if (config.enable === false) return;
-  if (!(await isEmberCliProject())) {
+
+  let isEmberCli = await isEmberCliProject();
+  console.info('isEmberCli', isEmberCli);
+  if (!isEmberCli) {
     return;
   }
 

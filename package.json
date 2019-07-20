@@ -1,6 +1,9 @@
 {
-  "name": "coc-ember",
+  "name": "@nullvoxpopuli/coc-ember",
   "version": "0.0.1",
+  "private": false,
+  "author": "NullVoxPopuli",
+  "license": "MIT",
   "description": "Ember language server extension for coc.nvim",
   "main": "lib/index.js",
   "engines": {
@@ -33,8 +36,6 @@
       }
     }
   },
-  "author": "NullVoxPopuli",
-  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
