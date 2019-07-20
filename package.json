@@ -1,0 +1,63 @@
+{
+  "name": "coc-ember",
+  "version": "0.0.1",
+  "description": "Ember language server extension for coc.nvim",
+  "main": "lib/index.js",
+  "engines": {
+    "coc": "^0.0.58"
+  },
+  "keywords": [
+    "nvim",
+    "coc.nvim",
+    "ember",
+    "ember-cli",
+    "ember-language-server"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "build:js": "babel src --out-dir lib --extensions \".ts\" --source-maps inline",
+    "lint:js": "eslint . --ext .ts",
+    "prepare": "npx npm-run-all clean build:js"
+  },
+  "activationEvents": [
+    "onLanguage:ember"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Vetur",
+      "properties": {
+        "ember.dev.lsPath": {
+          "type": "string",
+          "description": "Optional path to the language server for developing the language server."
+        }
+      }
+    }
+  },
+  "author": "NullVoxPopuli",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/node": "^12.6.8",
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "@typescript-eslint/parser": "^1.12.0",
+    "coc.nvim": "^0.0.73",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "typescript": "^3",
+    "vscode-languageserver-protocol": "^3.15.0-next.6"
+  },
+  "dependencies": {
+    "execa": "^2.0.3"
+  },
+  "volta": {
+    "node": "10.16.0",
+    "yarn": "1.17.3"
+  }
+}
