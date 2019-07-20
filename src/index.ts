@@ -17,6 +17,9 @@ export async function activate(context: ExtensionContext): Promise<void> {
   let config = getConfig();
 
   if (config.enable === false) return;
+  if (!(await isEmberCliProject())) {
+    return;
+  }
 
   let devPath = config.dev && config.dev.lsPath;
   let lsPath = devPath || languageServerPath;
@@ -66,6 +69,12 @@ function buildClientOptions(): LanguageClientOptions {
     ],
     outputChannelName: 'ember-language-server',
   };
+}
+
+async function isEmberCliProject(): Promise<boolean> {
+  let emberCliBuildFile = await workspace.findUp('ember-cli-build.js');
+
+  return !!emberCliBuildFile;
 }
 
 async function checkRequirements(languageServerPath: string): Promise<void> {
