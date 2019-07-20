@@ -20,10 +20,13 @@ const serverBin = ['lib', 'start-server.js'];
 
 export async function activate(context: ExtensionContext): Promise<void> {
   let config = getConfig();
+  console.error('config', config);
 
   if (config.enable === false) return;
 
   let isEmberCli = await isEmberCliProject();
+  console.error('isEmberCli', isEmberCli);
+
   if (!isEmberCli) {
     return;
   }
