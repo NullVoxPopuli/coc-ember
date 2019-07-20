@@ -16,6 +16,7 @@ const serverBin = 'lib/start-server.js';
 export async function activate(context: ExtensionContext): Promise<void> {
   console.log('attempting to activate coc-ember')
   let config = getConfig();
+  console.log('config', config);
   console.info('config', config);
 
   if (config.enable === false) return;
