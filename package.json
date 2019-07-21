@@ -31,12 +31,8 @@
   ],
   "contributes": {
     "configuration": {
-      "title": "Vetur",
+      "title": "Ember",
       "properties": {
-        "ember.dev.lsPath": {
-          "type": "string",
-          "description": "Optional path to the language server for developing the language server."
-        }
       }
     }
   },
