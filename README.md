@@ -48,7 +48,7 @@ To test this out with neovim:
 
 There are two working neovim single-file configs in this repo
  - [minimal](/docs/minimal-config.vim)
- - [recommended](/docs/recomended-config.vim)
+ - [recommended](/docs/recommended-config.vim)
 
 Additionally, [@NullVoxPopuli's vim config can be found here](https://github.com/NullVoxPopuli/dotfiles/blob/master/home/.config/nvim/init.vim)
 
