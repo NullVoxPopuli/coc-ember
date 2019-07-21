@@ -20,9 +20,10 @@ const serverBin = ['lib', 'start-server.js'];
 
 export async function activate(context: ExtensionContext): Promise<void> {
   let config = getConfig();
-  console.error('config', config);
+  let isEnabled = config.get('enable', true);
+  let isDebugging = config.get('debug', false);
 
-  if (config.enable === false) return;
+  if (!isEnabled) return;
 
   let isEmberCli = await isEmberCliProject();
   console.error('isEmberCli', isEmberCli);
@@ -39,14 +40,18 @@ export async function activate(context: ExtensionContext): Promise<void> {
 
   await checkRequirements(repoPath, binPath);
 
-  // The debug options for the server
-  let debugOptions = { execArgv: ['--nolazy', '--inspect=6004'] };
+  let debugOptions = isDebugging
+    ? { execArgv: ['--nolazy', '--inspect=6004'] }
+    : {};
 
   // If the extension is launched in debug mode then the debug
   // server options are used...
   // Otherwise the run options are used
   let serverOptions: ServerOptions = {
-    run: { module: binPath, transport: TransportKind.ipc },
+    run: {
+      module: binPath,
+      transport: TransportKind.ipc,
+    },
     debug: {
       module: binPath,
       transport: TransportKind.ipc,
@@ -80,7 +85,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
 function getConfig(): any {
   let workspaceConfig = workspace.getConfiguration();
 
-  let cocEmberConfig = workspaceConfig.get('ember') as any;
+  let cocEmberConfig = workspaceConfig.get('ember');
 
   return cocEmberConfig;
 }
