@@ -37,7 +37,7 @@ Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
     \ ]
     ```
 
-3. Restart your editor, run ``:PlugInstall`
+3. Restart your editor, run `:PlugInstall`
 4. Navigate to an ember project and open (neo|oni)vim.
 
 Done :)
