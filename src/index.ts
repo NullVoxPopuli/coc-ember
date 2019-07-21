@@ -24,6 +24,10 @@ export async function activate(context: ExtensionContext): Promise<void> {
   let isEnabled = config.get<boolean>('enable', true);
   let isDebugging = config.get<boolean>('debug', false);
 
+  console.error('config', config);
+  console.log('log config', config);
+  console.error('isEnabled', isEnabled);
+
   if (!isEnabled) return;
 
   let isEmberCli = await isEmberCliProject();
