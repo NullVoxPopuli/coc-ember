@@ -8,7 +8,7 @@
 Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
 ```
 
-### Minimum Config
+### Starting from Scratch
 
 1. Install [vim-plug](https://github.com/junegunn/vim-plug)
 2. Setup your (neo|oni)vim's config:
