@@ -9,6 +9,7 @@ import {
   services,
   TransportKind,
   LanguageClientOptions,
+  WorkspaceConfiguration,
 } from 'coc.nvim';
 
 const languageServerPath = [
@@ -20,8 +21,8 @@ const serverBin = ['lib', 'start-server.js'];
 
 export async function activate(context: ExtensionContext): Promise<void> {
   let config = getConfig();
-  let isEnabled = config.get('enable', true);
-  let isDebugging = config.get('debug', false);
+  let isEnabled = config.get<boolean>('enable', true);
+  let isDebugging = config.get<boolean>('debug', false);
 
   if (!isEnabled) return;
 
@@ -82,12 +83,10 @@ export async function activate(context: ExtensionContext): Promise<void> {
   context.subscriptions.push(services.registLanguageClient(client));
 }
 
-function getConfig(): any {
-  let workspaceConfig = workspace.getConfiguration();
+function getConfig(): WorkspaceConfiguration {
+  let config = workspace.getConfiguration('ember');
 
-  let cocEmberConfig = workspaceConfig.get('ember');
-
-  return cocEmberConfig;
+  return config;
 }
 
 function buildClientOptions(): LanguageClientOptions {
