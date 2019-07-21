@@ -19,6 +19,9 @@
     "lint:js": "eslint . --ext .ts",
     "prepare": "npx npm-run-all clean build:js"
   },
+  "engines": {
+    "coc": "^0.0.73"
+  },
   "activationEvents": [
     "onLanguage:hbs",
     "onLanguage:html.handlebars",
