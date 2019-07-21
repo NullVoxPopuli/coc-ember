@@ -8,6 +8,40 @@
 Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
 ```
 
+### Minimum Config
+
+1. Install [vim-plug](https://github.com/junegunn/vim-plug)
+2. Setup your (neo|oni)vim's config:
+
+    ```vim
+    call plug#begin('~/.local/share/nvim/plugged')
+
+      " Highlighting and language support
+      Plug 'leafgarland/typescript-vim'
+      Plug 'joukevandermaas/vim-ember-hbs'
+
+      " CoC / Intellisense
+      Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+      Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
+
+    call plug#end()
+
+
+    let g:coc_global_extensions = [
+      \ 'coc-tsserver',
+      \ 'coc-css',
+      \ 'coc-json',
+      \ 'coc-html',
+      \ 'coc-vimlsp',
+      \ 'coc-highlight'
+    \ ]
+    ```
+
+3. Restart your editor, run ``:PlugInstall`
+4. Navigate to an ember project and open (neo|oni)vim.
+
+Done :)
+
 ## Features
 
 [from @lifeart's PR](https://github.com/emberwatch/ember-language-server/pull/173)
