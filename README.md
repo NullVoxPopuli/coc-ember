@@ -25,3 +25,10 @@ Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
 - named: service(name) services autocomplete
 - template linting fix
 - in-repo addons lookup (for classic and mu apps)
+
+## Screenshots
+
+
+![Helper or Component](/docs/images/helper-or-component.png?raw=true)
+![Helpers](/docs/images/helpers.png?raw=true)
+![Error](/docs/images/error.png?raw=true)
