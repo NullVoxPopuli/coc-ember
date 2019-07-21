@@ -1,6 +1,6 @@
 {
   "name": "@nullvoxpopuli/coc-ember",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "private": false,
   "author": "NullVoxPopuli",
   "license": "MIT",
@@ -32,8 +32,7 @@
   "contributes": {
     "configuration": {
       "title": "Ember",
-      "properties": {
-      }
+      "properties": {}
     }
   },
   "devDependencies": {
