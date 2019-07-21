@@ -128,7 +128,11 @@ async function checkRequirements(
 }
 
 function doesFileExist(filePath: string): boolean {
-  const result = execa.commandSync(`test -f ${filePath}`);
+  try {
+    const result = execa.commandSync(`test -f ${filePath}`);
 
-  return result.exitCode === 0;
+    return result.exitCode === 0;
+  } catch (e) {
+    return false;
+  }
 }
