@@ -70,6 +70,16 @@ Additionally, [@NullVoxPopuli's vim config can be found here](https://github.com
 - template linting fix
 - in-repo addons lookup (for classic and mu apps)
 
+Other Features:
+- Component and helper autocompletion for inline and sub expressions
+- Definition providers for (enable features like "Go To Definition" or "Peek Definition"):
+  - Components (in Templates)
+  - Helpers (in Templates)
+  - Models
+  - Transforms
+- Route autocompletion in link-to
+- Diagnostics for ember-template-lint (if it is included in a project)
+
 ## Screenshots
 
 
