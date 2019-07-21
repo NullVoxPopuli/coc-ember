@@ -42,6 +42,16 @@ Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
 
 Done :)
 
+To test this out with neovim:
+1. clone this repo
+2. go to an ember project and run `nvim . -u path/to/repo/docs/minimal-config.vim`
+
+There are two working neovim single-file configs in this repo
+ - [minimal](/docs/minimal-config.vim)
+ - [recommended](/docs/recomended-config.vim)
+
+Additionally, [@NullVoxPopuli's vim config can be found here](https://github.com/NullVoxPopuli/dotfiles/blob/master/home/.config/nvim/init.vim)
+
 ## Features
 
 [from @lifeart's PR](https://github.com/emberwatch/ember-language-server/pull/173)
