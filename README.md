@@ -10,6 +10,7 @@ Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
 
 ### Starting from Scratch
 
+0. For the fanciest experience, install [the neovim nightly release](https://github.com/neovim/neovim/releases/)
 1. Install [vim-plug](https://github.com/junegunn/vim-plug)
 2. Setup your (neo|oni)vim's config:
 
