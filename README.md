@@ -4,8 +4,17 @@
 
 ## Install
 
+Via Plug
 ```
 Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
+```
+
+Or via the automatically kept up-to-date config var:
+
+```
+let g:coc_global_extensions = [
+  \ 'coc-ember'
+\ ]
 ```
 
 ### Starting from Scratch
@@ -23,7 +32,6 @@ Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
 
       " CoC / Intellisense
       Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-      Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
 
     call plug#end()
 
@@ -34,7 +42,8 @@ Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
       \ 'coc-json',
       \ 'coc-html',
       \ 'coc-vimlsp',
-      \ 'coc-highlight'
+      \ 'coc-highlight',
+      \ 'coc-ember'
     \ ]
     ```
 
