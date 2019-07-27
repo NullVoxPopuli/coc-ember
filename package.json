@@ -17,7 +17,7 @@
     "clean": "rimraf lib",
     "build:js": "babel src --out-dir lib --extensions \".ts\" --source-maps inline",
     "lint:js": "eslint . --ext .ts",
-    "prepare": "npx npm-run-all clean build:js"
+    "build": "npx npm-run-all clean build:js"
   },
   "engines": {
     "coc": "^0.0.73"
