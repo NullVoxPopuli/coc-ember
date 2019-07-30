@@ -19,6 +19,12 @@
     "lint:js": "eslint . --ext .ts",
     "build": "npx npm-run-all clean build:js"
   },
+  "files": [
+    "package.json",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
   "engines": {
     "coc": "^0.0.73"
   },
