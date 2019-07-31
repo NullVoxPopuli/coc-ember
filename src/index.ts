@@ -39,7 +39,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
 
   let repoPath = context.asAbsolutePath(path.join(...languageServerPath));
 
-  let cocEmberPath = context.asAbsolutePath();
+  let cocEmberPath = context.asAbsolutePath(path.join('.'));
 
   await checkRequirements(repoPath, binPath, cocEmberPath);
 
