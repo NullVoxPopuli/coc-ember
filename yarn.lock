@@ -722,7 +722,7 @@
   dependencies:
     msgpack-lite "^0.1.26"
 
-"@emberwatch/ember-language-server@lifeart/ember-language-server#component-context-info":
+"@emberwatch/ember-language-server@github:lifeart/ember-language-server#component-context-info":
   version "0.2.1"
   resolved "https://codeload.github.com/lifeart/ember-language-server/tar.gz/37af23739f206e2b2a8e98a7d453fa177245c5aa"
   dependencies:

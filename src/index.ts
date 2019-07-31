@@ -118,6 +118,7 @@ async function checkRequirements(
     return;
   }
 
+  console.error('ls path', repoPath);
   await execa.command(`yarn`, {
     cwd: repoPath,
   });
