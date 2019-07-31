@@ -22,6 +22,7 @@
   "files": [
     "package.json",
     "lib",
+    "tsconfig.json",
     "README.md",
     "LICENSE"
   ],
