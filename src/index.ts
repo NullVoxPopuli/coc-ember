@@ -39,7 +39,9 @@ export async function activate(context: ExtensionContext): Promise<void> {
 
   let repoPath = context.asAbsolutePath(path.join(...languageServerPath));
 
-  await checkRequirements(repoPath, binPath);
+  let cocEmberPath = context.asAbsolutePath();
+
+  await checkRequirements(repoPath, binPath, cocEmberPath);
 
   let debugOptions = isDebugging
     ? { execArgv: ['--nolazy', '--inspect=6004'] }
@@ -110,7 +112,8 @@ async function isEmberCliProject(): Promise<boolean> {
 
 async function checkRequirements(
   repoPath: string,
-  binPath: string
+  binPath: string,
+  cocEmberPath: string
 ): Promise<void> {
   let isAlreadyBuilt = doesFileExist(binPath);
 
@@ -118,7 +121,16 @@ async function checkRequirements(
     return;
   }
 
-  console.error('ls path', repoPath);
+  // Ensure we've fetched our own dependcies.
+  // coc-nvim does npm install on coc-* packages.
+  // npm install applies the .npmignore to git repos
+  // which means if your repo does not include the built
+  // files, there is no way to reference something from git.
+  //
+  // so... we need to run yarn on ourselves....
+  await execa.command(`yarn`, { cwd: cocEmberPath });
+
+  // running yarn on the ember-language-server will also build it
   await execa.command(`yarn`, {
     cwd: repoPath,
   });
