@@ -15,6 +15,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'joukevandermaas/vim-ember-hbs'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'Quramy/vim-js-pretty-template'
 
   " CoC / Intellisense
   Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
@@ -176,6 +177,21 @@ set titlestring=%f%(\ [%M]%)
 
 
 
+" Allow for named template literals to be highlighted
+" in a different syntax than the main buffer.
+" https://github.com/Quramy/vim-js-pretty-template
+function EnableTemplateLiteralColors()
+  " list of named template literal tags and their syntax here
+  call jspretmpl#register_tag('hbs', 'handlebars')
+
+  autocmd FileType javascript JsPreTmpl
+  autocmd FileType typescript JsPreTmpl
+
+  " compat with leafgarland/typescript-vim
+  autocmd FileType typescript syn clear foldBraces
+endfunction
+
+call EnableTemplateLiteralColors()
 
 
 
