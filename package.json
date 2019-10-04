@@ -1,6 +1,6 @@
 {
   "name": "coc-ember",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "private": false,
   "author": "NullVoxPopuli",
   "license": "MIT",
@@ -25,7 +25,11 @@
     "lib",
     "tsconfig.json",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "src",
+    "types",
+    "docs",
+    "node_modules"
   ],
   "engines": {
     "coc": "^0.0.73"
