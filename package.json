@@ -17,7 +17,7 @@
     "clean": "rimraf lib",
     "build:js": "babel src --out-dir lib --extensions \".ts\" --source-maps inline",
     "build:language-server": "cd node_modules/@emberwatch/ember-language-server && yarn",
-    "build:bundle-language-server": "cp node_modules/@emberwatch/ember-language-server lib/",
+    "build:bundle-language-server": "cp -r node_modules/@emberwatch/ember-language-server lib/",
     "lint:js": "eslint . --ext .ts",
     "prepublish": "npx npm-run-all clean build:js build:language-server build:bundle-language-server"
   },
