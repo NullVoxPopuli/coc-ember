@@ -25,7 +25,11 @@
     "lib",
     "tsconfig.json",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "src",
+    "types",
+    "docs",
+    "node_modules"
   ],
   "engines": {
     "coc": "^0.0.73"
