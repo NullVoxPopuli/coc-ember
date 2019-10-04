@@ -1,4 +1,5 @@
 import path from 'path';
+import execa from 'execa';
 
 import {
   ExtensionContext,
@@ -35,6 +36,14 @@ export async function activate(context: ExtensionContext): Promise<void> {
   let binPath = context.asAbsolutePath(
     path.join(...languageServerPath, ...serverBin)
   );
+
+  let repoPath = context.asAbsolutePath(path.join(...languageServerPath));
+
+  console.error(repoPath);
+  let cocEmberPath = context.asAbsolutePath(path.join('.'));
+  console.error(cocEmberPath);
+
+  await checkRequirements(repoPath, binPath, cocEmberPath);
 
   let debugOptions = isDebugging
     ? { execArgv: ['--nolazy', '--inspect=6004'] }
@@ -101,4 +110,42 @@ async function isEmberCliProject(): Promise<boolean> {
   let emberCliBuildFile = await workspace.findUp('ember-cli-build.js');
 
   return !!emberCliBuildFile;
+}
+
+async function checkRequirements(
+  repoPath: string,
+  binPath: string,
+  cocEmberPath: string
+): Promise<void> {
+  let isAlreadyBuilt = doesFileExist(binPath);
+
+  console.error('isAlreadyBuilt', isAlreadyBuilt);
+
+  if (isAlreadyBuilt) {
+    return;
+  }
+
+  // Ensure we've fetched our own dependcies.
+  // coc-nvim does npm install on coc-* packages.
+  // npm install applies the .npmignore to git repos
+  // which means if your repo does not include the built
+  // files, there is no way to reference something from git.
+  //
+  // so... we need to install our own dependencies....
+  await execa.command(`npm install`, { cwd: cocEmberPath });
+
+  // running yarn on the ember-language-server will also build it
+  await execa.command(`npm run coc:prepare`, {
+    cwd: repoPath,
+  });
+}
+
+function doesFileExist(filePath: string): boolean {
+  try {
+    const result = execa.commandSync(`test -f ${filePath}`);
+
+    return result.exitCode === 0;
+  } catch (e) {
+    return false;
+  }
 }
