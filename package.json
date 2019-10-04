@@ -1,6 +1,6 @@
 {
   "name": "coc-ember",
-  "version": "1.0.9",
+  "version": "1.0.12",
   "private": false,
   "author": "NullVoxPopuli",
   "license": "MIT",
@@ -17,8 +17,9 @@
     "clean": "rimraf lib",
     "build:js": "babel src --out-dir lib --extensions \".ts\" --source-maps inline",
     "build:language-server": "cd node_modules/@emberwatch/ember-language-server && yarn",
+    "build:bundle-language-server": "cp -r node_modules/@emberwatch/ember-language-server lib/",
     "lint:js": "eslint . --ext .ts",
-    "postinstall": "npx npm-run-all clean build:js build:language-server"
+    "prepublish": "npx npm-run-all clean build:js build:language-server build:bundle-language-server"
   },
   "files": [
     "package.json",

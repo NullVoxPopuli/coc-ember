@@ -11,11 +11,7 @@ import {
   WorkspaceConfiguration,
 } from 'coc.nvim';
 
-const languageServerPath = [
-  'node_modules',
-  '@emberwatch',
-  'ember-language-server',
-];
+const languageServerPath = ['lib', 'ember-language-server'];
 const serverBin = ['lib', 'start-server.js'];
 
 export async function activate(context: ExtensionContext): Promise<void> {
