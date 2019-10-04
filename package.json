@@ -17,19 +17,16 @@
     "clean": "rimraf lib",
     "build:js": "babel src --out-dir lib --extensions \".ts\" --source-maps inline",
     "build:language-server": "cd node_modules/@emberwatch/ember-language-server && yarn",
+    "build:bundle-language-server": "cp node_modules/@emberwatch/ember-language-server lib/",
     "lint:js": "eslint . --ext .ts",
-    "coc:prepare": "npx npm-run-all clean build:js build:language-server"
+    "prepublish": "npx npm-run-all clean build:js build:language-server build:bundle-language-server"
   },
   "files": [
     "package.json",
     "lib",
     "tsconfig.json",
     "README.md",
-    "LICENSE",
-    "src",
-    "types",
-    "docs",
-    "node_modules"
+    "LICENSE"
   ],
   "engines": {
     "coc": "^0.0.73"
