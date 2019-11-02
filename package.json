@@ -1,6 +1,6 @@
 {
   "name": "coc-ember",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "private": false,
   "author": "NullVoxPopuli",
   "license": "MIT",
@@ -64,7 +64,7 @@
     "vscode-languageserver-protocol": "^3.15.0-next.6"
   },
   "dependencies": {
-    "@emberwatch/ember-language-server": "github:lifeart/ember-language-server#a7f3436df1d28c1fe5ae8edea71b035560f4e13d"
+    "@emberwatch/ember-language-server": "github:lifeart/ember-language-server#330a8b0dd7ffc3260783bf4017eb306460994bdd"
   },
   "volta": {
     "node": "10.16.0",
