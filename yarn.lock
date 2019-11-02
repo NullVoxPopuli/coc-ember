@@ -722,9 +722,9 @@
   dependencies:
     msgpack-lite "^0.1.26"
 
-"@emberwatch/ember-language-server@github:lifeart/ember-language-server#a7f3436df1d28c1fe5ae8edea71b035560f4e13d":
+"@emberwatch/ember-language-server@github:lifeart/ember-language-server#330a8b0dd7ffc3260783bf4017eb306460994bdd":
   version "0.2.2"
-  resolved "https://codeload.github.com/lifeart/ember-language-server/tar.gz/a7f3436df1d28c1fe5ae8edea71b035560f4e13d"
+  resolved "https://codeload.github.com/lifeart/ember-language-server/tar.gz/330a8b0dd7ffc3260783bf4017eb306460994bdd"
   dependencies:
     "@glimmer/syntax" "^0.39.3"
     ast-types "^0.11.3"
