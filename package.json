@@ -64,7 +64,7 @@
     "vscode-languageserver-protocol": "^3.15.0-next.6"
   },
   "dependencies": {
-    "@emberwatch/ember-language-server": "github:lifeart/ember-language-server#component-context-info"
+    "@emberwatch/ember-language-server": "github:lifeart/ember-language-server#a7f3436df1d28c1fe5ae8edea71b035560f4e13d"
   },
   "volta": {
     "node": "10.16.0",

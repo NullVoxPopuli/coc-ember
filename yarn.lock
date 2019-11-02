@@ -722,13 +722,14 @@
   dependencies:
     msgpack-lite "^0.1.26"
 
-"@emberwatch/ember-language-server@github:lifeart/ember-language-server#component-context-info":
-  version "0.2.1"
-  resolved "https://codeload.github.com/lifeart/ember-language-server/tar.gz/37af23739f206e2b2a8e98a7d453fa177245c5aa"
+"@emberwatch/ember-language-server@github:lifeart/ember-language-server#a7f3436df1d28c1fe5ae8edea71b035560f4e13d":
+  version "0.2.2"
+  resolved "https://codeload.github.com/lifeart/ember-language-server/tar.gz/a7f3436df1d28c1fe5ae8edea71b035560f4e13d"
   dependencies:
     "@glimmer/syntax" "^0.39.3"
     ast-types "^0.11.3"
     ember-meta-explorer "^0.0.11"
+    extract-tagged-template-literals "^1.0.1"
     fs-extra "^5.0.0"
     fuzzaldrin "^2.1.0"
     i "^0.3.5"
@@ -1563,6 +1564,11 @@ extglob@^2.0.4:
     regex-not "^1.0.0"
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
+
+extract-tagged-template-literals@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/extract-tagged-template-literals/-/extract-tagged-template-literals-1.0.3.tgz#d80cba3997d898700ed41f685296f2e05f27fbcd"
+  integrity sha512-JJSdnsAPPZrcqF0vT6n8z0qFel0Av1gfY01EOWak13x50RojD6T6Fp6zx9iKRXjM8+BEf2YSxw3X3G2NjdGfPA==
 
 fast-deep-equal@^2.0.1:
   version "2.0.1"
