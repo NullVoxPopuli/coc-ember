@@ -11,6 +11,7 @@
     "lib": ["es2018"],
     "plugins": []
   },
+
   "include": ["src"],
   "exclude": [
     ".eslintrc.js",
