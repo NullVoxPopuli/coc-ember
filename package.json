@@ -14,12 +14,13 @@
     "ember-language-server"
   ],
   "scripts": {
+    "update-language-server": "yarn upgrade @emberwatch/ember-language-server",
     "clean": "rimraf lib",
     "build:js": "babel src --out-dir lib --extensions \".ts\" --source-maps inline",
     "build:language-server": "cd node_modules/@emberwatch/ember-language-server && yarn",
     "build:bundle-language-server": "cp -r node_modules/@emberwatch/ember-language-server lib/",
     "lint:js": "eslint . --ext .ts",
-    "prepublish": "npx npm-run-all clean build:js build:language-server build:bundle-language-server"
+    "prepublishOnly": "npx npm-run-all clean build:js build:language-server build:bundle-language-server"
   },
   "files": [
     "package.json",
@@ -64,7 +65,7 @@
     "vscode-languageserver-protocol": "^3.14.1"
   },
   "dependencies": {
-    "@emberwatch/ember-language-server": "github:lifeart/ember-language-server#a3abb22c15655d922eae47ceeec24164397d651a"
+    "@emberwatch/ember-language-server": "github:lifeart/ember-language-server#component-context-info"
   },
   "volta": {
     "node": "10.16.0",
