@@ -15,10 +15,10 @@
   ],
   "scripts": {
     "update-language-server": "yarn upgrade @emberwatch/ember-language-server",
-    "clean": "rimraf lib",
+    "clean": "rimraf lib tmp",
     "build:js": "babel src --out-dir lib --extensions \".ts\" --source-maps inline",
-    "build:language-server": "cd node_modules/@emberwatch/ember-language-server && yarn",
-    "build:bundle-language-server": "cp -r node_modules/@emberwatch/ember-language-server lib/",
+    "build:language-server": "./scripts/build-uels.sh",
+    "build:bundle-language-server": "cp -r tmp/UELS/ember-language-server lib/",
     "lint:js": "eslint . --ext .ts",
     "prepublishOnly": "npx npm-run-all clean build:js build:language-server build:bundle-language-server"
   },
