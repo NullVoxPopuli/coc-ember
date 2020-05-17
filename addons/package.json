@@ -1,0 +1,14 @@
+{
+  "name": "addons",
+  "version": "0.0.0",
+  "description": "UELS Default Addons",
+  "main": "index.js",
+  "author": "NullVoxPopuli",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "els-a11y-addon": "^1.0.4",
+    "els-addon-typed-templates": "^2.2.18",
+    "els-intl-addon": "^1.0.2"
+  }
+}
