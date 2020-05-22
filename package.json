@@ -18,9 +18,9 @@
     "clean": "rimraf lib tmp",
     "build:js": "babel src --out-dir lib --extensions \".ts\" --source-maps inline",
     "build:language-server": "./scripts/build-uels.sh",
-    "build:bundle-language-server": "cp -r tmp/UELS/ember-language-server lib/",
+    "build:addons": "./scripts/build-addons.sh",
     "lint:js": "eslint . --ext .ts",
-    "prepublishOnly": "npx npm-run-all clean build:js build:language-server build:bundle-language-server"
+    "prepublishOnly": "./scripts/prepublish.sh"
   },
   "files": [
     "package.json",
@@ -37,12 +37,42 @@
     "onLanguage:html.handlebars",
     "onLanguage:handlebars",
     "onLanguage:typescript",
-    "onLanguage:javascript"
+    "onLanguage:javascript",
+    "workspaceContains:ember-cli-build.js"
   ],
   "contributes": {
     "configuration": {
       "title": "Ember",
-      "properties": {}
+      "properties": {
+        "els.codeLens.relatedFiles": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show related files as Lens on first line."
+        },
+        "els.local.addons": {
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "description": "List of UELS addon paths to include."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "els.reloadProject",
+        "title": "Restart Ember Language Server",
+        "category": "Ember"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "els.fileUsages",
+          "name": "Ember File Usages"
+        }
+      ]
     }
   },
   "devDependencies": {
@@ -66,7 +96,7 @@
     "vscode-languageserver-protocol": "^3.15.3"
   },
   "dependencies": {
-    "@emberwatch/ember-language-server": "github:lifeart/ember-language-server#component-context-info"
+    "@emberwatch/ember-language-server": "github:lifeart/ember-language-server#component-context-info-origin"
   },
   "volta": {
     "node": "10.18.0",

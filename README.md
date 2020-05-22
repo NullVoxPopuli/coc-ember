@@ -37,6 +37,7 @@ let g:coc_global_extensions = [
 
 
     let g:coc_global_extensions = [
+      \ 'coc-actions',
       \ 'coc-tsserver',
       \ 'coc-css',
       \ 'coc-json',
@@ -96,3 +97,53 @@ Other Features:
 ![Helper or Component](/docs/images/helper-or-component.png?raw=true)
 ![Helpers](/docs/images/helpers.png?raw=true)
 ![Error](/docs/images/error.png?raw=true)
+
+
+## Contributing
+
+NOTE: development will not work on Windows machines, as all the scripts are in Bash
+      and expect *nix compatibility
+
+- fork repo
+- make modifications
+- Open PR &lt;3
+
+
+**Testing**
+- be in coc-ember root directory
+- `./scripts/prepublish.sh`
+- `yarn link`
+- test in your own ember project via
+  - :CocList extensions
+  - cd to the extensions path (the folder containing a package.json, on linux: `~/.config/coc/extensions/`)
+  - `yarn link coc-ember`
+  - restart (neo)vim
+
+
+**Debugging**
+
+NOTE: `./scripts/prepublish.sh` needs be run initially. Afterwards, the following may be used to rebuild each sub-tool, depending on what you're changing.
+- `yarn build:js` - coc-ember
+- `yarn build:language-server` - the UELS, prepend with `LOCAL_DEBUG=true` to debug the LS itself (persist changes in a local tmp directory (.els--testing) instead of a system tmp directory)
+- `yarn build:addons` - the UELS addons bundled with coc-ember
+
+
+Generally
+- be in ember project
+- open (neo)vim
+
+Viewing Logs
+- Optionally launch with `NVIM_COC_LOG_LEVEL=debug nvim .`
+  - This is very verbose, but is the only way to have stack traces printed
+- `:CocOpenLog` to view log.
+  - `:e` to refresh the log
+
+Debugging Chrome Dev Tools
+```
+:let g:coc_node_args = ['--nolazy', '--inspect-brk=6045']`
+:CocRestart
+```
+Then visit chrome://inspect/#devices
+
+More info:
+https://github.com/neoclide/coc.nvim/wiki/Debug-coc.nvim#get-result-from-console
