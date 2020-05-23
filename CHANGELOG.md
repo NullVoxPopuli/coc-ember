@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/NullVoxPopuli/coc-ember/compare/v1.4.5...v1.4.6) (2020-05-23)
+
+
+### Bug Fixes
+
+* **internal:** add semantic-release/git ([bf2ede7](https://github.com/NullVoxPopuli/coc-ember/commit/bf2ede70396cc3c875ef7c9ef55ee1bf2430a6a2))
+
 # [1.1.0](https://github.com/NullVoxPopuli/coc-ember/compare/v1.4.3...v1.1.0) (2020-05-23)
 
 
@@ -157,6 +164,3 @@
 
 
 ## 0.0.2 (2019-07-20)
-
-
-
