@@ -14,7 +14,7 @@ env:
 
 jobs:
   lint:
-    if: "! contains(toJSON(github.event.commitns.*.message), '[skip ci]')"
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
     name: Lint
     runs-on: ubuntu-latest
     steps:
