@@ -1,3 +1,10 @@
+## [1.4.7](https://github.com/NullVoxPopuli/coc-ember/compare/v1.4.6...v1.4.7) (2020-05-23)
+
+
+### Bug Fixes
+
+* **internal:** ci typo ([a66ff85](https://github.com/NullVoxPopuli/coc-ember/commit/a66ff85d77ddb31401538ba729ec53225e08b34f))
+
 ## [1.4.6](https://github.com/NullVoxPopuli/coc-ember/compare/v1.4.5...v1.4.6) (2020-05-23)
 
 
