@@ -111,7 +111,7 @@
     "@emberwatch/ember-language-server": "github:lifeart/ember-language-server#component-context-info-origin"
   },
   "volta": {
-    "node": "10.18.0",
+    "node": "10.22.0",
     "yarn": "1.22.4"
   }
 }
