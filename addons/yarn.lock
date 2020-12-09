@@ -34,10 +34,10 @@ els-a11y-addon@^1.0.4:
   dependencies:
     aria-query "^3.0.0"
 
-els-intl-addon@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/els-intl-addon/-/els-intl-addon-1.0.4.tgz#c9a7f453e38246aeb5cd407c9a056174f3b55938"
-  integrity sha512-51ameqD5SS8KxXL1mQtFh7nScZLTXJ6UsNUPqFxXwXXPSbMfrI7Z3zeCCcjwJdNMJnN0npow09blzxBIdW66Kw==
+els-intl-addon@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/els-intl-addon/-/els-intl-addon-1.0.5.tgz#88e76d0aed4a6bbd538300ed78c3640aefefded2"
+  integrity sha512-WzWncoRj5jXD6hwsmr247pVg888aDiUFhp4l2UPdUWbH8ZK4UF3hW8KDfRIcSh7TOIBj44Sk6/cNg37aBS7Ohg==
   dependencies:
     flat "^5.0.0"
     js-yaml "^3.14.0"
