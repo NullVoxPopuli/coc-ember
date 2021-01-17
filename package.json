@@ -17,7 +17,6 @@
     "update-language-server": "yarn upgrade @emberwatch/ember-language-server",
     "clean": "rimraf lib tmp",
     "build:js": "babel src --out-dir lib --extensions \".ts\" --source-maps inline",
-    "build:language-server": "./scripts/build-uels.sh",
     "build:addons": "./scripts/build-addons.sh",
     "lint:js": "eslint . --ext .ts",
     "prepublishOnly": "./scripts/prepublish.sh"
@@ -108,7 +107,7 @@
     "vscode-languageserver-protocol": "^3.16.0"
   },
   "dependencies": {
-    "@emberwatch/ember-language-server": "github:lifeart/ember-language-server#component-context-info-origin"
+    "@lifeart/ember-language-server": "1.0.1"
   },
   "volta": {
     "node": "10.18.0",
