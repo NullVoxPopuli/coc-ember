@@ -124,7 +124,6 @@ NOTE: development will not work on Windows machines, as all the scripts are in B
 
 NOTE: `./scripts/prepublish.sh` needs be run initially. Afterwards, the following may be used to rebuild each sub-tool, depending on what you're changing.
 - `yarn build:js` - coc-ember
-- `yarn build:language-server` - the UELS, prepend with `LOCAL_DEBUG=true` to debug the LS itself (persist changes in a local tmp directory (.els--testing) instead of a system tmp directory)
 - `yarn build:addons` - the UELS addons bundled with coc-ember
 
 
