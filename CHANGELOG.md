@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/NullVoxPopuli/coc-ember/compare/v1.4.7...v1.5.0) (2021-01-17)
+
+
+### Features
+
+* use published @lifeart/ember-language-servers package ([c0f0f28](https://github.com/NullVoxPopuli/coc-ember/commit/c0f0f281c4db9b196bfc6c9318e1011c7397c41e))
+
 ## [1.4.7](https://github.com/NullVoxPopuli/coc-ember/compare/v1.4.6...v1.4.7) (2020-05-23)
 
 
