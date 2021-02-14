@@ -93,7 +93,7 @@
     "@babel/preset-typescript": "^7.12.16",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "@types/node": "^13.13.41",
+    "@types/node": "^13.13.42",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
     "coc.nvim": "^0.0.79",
