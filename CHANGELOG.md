@@ -1,3 +1,10 @@
+## [1.5.9](https://github.com/NullVoxPopuli/coc-ember/compare/v1.5.8...v1.5.9) (2021-04-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @lifeart/ember-language-server to v1.5.0 ([8764d6f](https://github.com/NullVoxPopuli/coc-ember/commit/8764d6f2957a5ab635a7df2b37e388fde34e4b21))
+
 ## [1.5.8](https://github.com/NullVoxPopuli/coc-ember/compare/v1.5.7...v1.5.8) (2021-04-05)
 
 
