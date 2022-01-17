@@ -46,7 +46,9 @@
     "onLanguage:html.handlebars",
     "onLanguage:handlebars",
     "onLanguage:typescript",
+    "onLanguage:typescript.glimmer",
     "onLanguage:javascript",
+    "onLanguage:javascript.glimmer",
     "workspaceContains:ember-cli-build.js"
   ],
   "contributes": {
