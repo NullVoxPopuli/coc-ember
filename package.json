@@ -93,7 +93,7 @@
     "@babel/preset-typescript": "^7.14.5",
     "@nullvoxpopuli/eslint-configs": "^2.1.17",
     "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/git": "^9.0.1",
     "@types/node": "^14.17.4",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
@@ -105,7 +105,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.3.1",
     "rimraf": "^3.0.2",
-    "semantic-release": "^17.4.4",
+    "semantic-release": "^17.4.7",
     "typescript": "^4.3.4",
     "vscode-languageserver-protocol": "^3.16.0"
   },
