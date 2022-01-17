@@ -1,4 +1,4 @@
-import { commands, LanguageClient, services, TransportKind, workspace } from 'coc.nvim';
+import { commands, LanguageClient, services, TransportKind, window, workspace } from 'coc.nvim';
 import { readdirSync } from 'fs';
 import path from 'path';
 
@@ -107,19 +107,22 @@ function configureClient(client: LanguageClient, context: ExtensionContext) {
 
   commands.executeCommand(COMMANDS.SET_CONFIG, cocUELSConfig);
 
+  let { nvim } = workspace;
+
   context.subscriptions.push(
     commands.registerCommand(COMMANDS.GET_USER_INPUT, async (opts, callbackName, tail) => {
       try {
         console.info('Getting user input...');
 
-        let name = await workspace.requestInput('Component Name');
+        let name = await nvim.call('input', ['Component Name', '']);
         let document = tail.uri;
 
         console.info(callbackName, document, name, tail);
 
         await commands.executeCommand(callbackName, document, name, tail);
-      } catch (e) {
-        workspace.showMessage(e.toString(), 'error');
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } catch (e: any) {
+        window.showMessage(e.toString(), 'error');
       }
     })
   );
