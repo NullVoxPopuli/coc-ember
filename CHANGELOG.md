@@ -1,3 +1,11 @@
+## [1.5.24](https://github.com/NullVoxPopuli/coc-ember/compare/v1.5.23...v1.5.24) (2022-01-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @lifeart/ember-language-server to v2 ([e4b9725](https://github.com/NullVoxPopuli/coc-ember/commit/e4b97258b0b00cbc00b0c96d5b3a724126045a70))
+* **languages:** add typescript.glimmer and javascript.glimmer ([49c83e5](https://github.com/NullVoxPopuli/coc-ember/commit/49c83e578a2de57e12b73789d46ad7e2769b583a))
+
 ## [1.5.23](https://github.com/NullVoxPopuli/coc-ember/compare/v1.5.22...v1.5.23) (2022-01-17)
 
 
