@@ -1,25 +1,15 @@
-import path from 'path';
+import { commands, LanguageClient, services, TransportKind, workspace } from 'coc.nvim';
 import { readdirSync } from 'fs';
+import path from 'path';
 
-import {
+import type {
   ExtensionContext,
-  LanguageClient,
-  ServerOptions,
-  workspace,
-  commands,
-  services,
-  Uri,
-  languages,
-  TransportKind,
   LanguageClientOptions,
+  ServerOptions,
   WorkspaceConfiguration,
 } from 'coc.nvim';
 
-const languageServerPath = [
-  'node_modules',
-  '@lifeart',
-  'ember-language-server',
-];
+const languageServerPath = ['node_modules', '@lifeart', 'ember-language-server'];
 const serverBin = ['lib', 'start-server.js'];
 const addonPath = ['lib', 'addons'];
 
@@ -69,19 +59,12 @@ async function boot(context: ExtensionContext) {
   configureClient(client, context);
 }
 
-async function startLanguageServerClient(
-  context: ExtensionContext,
-  isDebugging = false
-) {
-  let binPath = context.asAbsolutePath(
-    path.join(...languageServerPath, ...serverBin)
-  );
+async function startLanguageServerClient(context: ExtensionContext, isDebugging = false) {
+  let binPath = context.asAbsolutePath(path.join(...languageServerPath, ...serverBin));
 
   console.info('UELS bin @', binPath);
 
-  let debugOptions = isDebugging
-    ? { execArgv: ['--nolazy', '--inspect=6004'] }
-    : {};
+  let debugOptions = isDebugging ? { execArgv: ['--nolazy', '--inspect=6004'] } : {};
 
   // If the extension is launched in debug mode then the debug
   // server options are used...
@@ -125,23 +108,20 @@ function configureClient(client: LanguageClient, context: ExtensionContext) {
   commands.executeCommand(COMMANDS.SET_CONFIG, cocUELSConfig);
 
   context.subscriptions.push(
-    commands.registerCommand(
-      COMMANDS.GET_USER_INPUT,
-      async (opts, callbackName, tail) => {
-        try {
-          console.info('Getting user input...');
+    commands.registerCommand(COMMANDS.GET_USER_INPUT, async (opts, callbackName, tail) => {
+      try {
+        console.info('Getting user input...');
 
-          let name = await workspace.requestInput('Component Name');
-          let document = tail.uri;
+        let name = await workspace.requestInput('Component Name');
+        let document = tail.uri;
 
-          console.info(callbackName, document, name, tail);
+        console.info(callbackName, document, name, tail);
 
-          await commands.executeCommand(callbackName, document, name, tail);
-        } catch (e) {
-          workspace.showMessage(e.toString(), 'error');
-        }
+        await commands.executeCommand(callbackName, document, name, tail);
+      } catch (e) {
+        workspace.showMessage(e.toString(), 'error');
       }
-    )
+    })
   );
 }
 
@@ -184,13 +164,7 @@ function getUELSConfig(): WorkspaceConfiguration {
 
 function buildClientOptions(): LanguageClientOptions {
   return {
-    documentSelector: [
-      'hbs',
-      'html.handlebars',
-      'handlebars',
-      'typescript',
-      'javascript',
-    ],
+    documentSelector: ['hbs', 'html.handlebars', 'handlebars', 'typescript', 'javascript'],
     initializationOptions: {
       editor: 'vscode', // hack
     },
