@@ -28,9 +28,9 @@ jobs:
     #   run: yarn lint:hbs
     - name: Types
       run: yarn tsc --noEmit
-    - uses: wagoid/commitlint-github-action@v3
+    - uses: wagoid/commitlint-github-action@v4.1.9
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
   publish:
@@ -45,6 +45,6 @@ jobs:
     - run: yarn install
     - name: Release
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: yarn semantic-release
