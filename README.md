@@ -146,3 +146,24 @@ Then visit chrome://inspect/#devices
 
 More info:
 https://github.com/neoclide/coc.nvim/wiki/Debug-coc.nvim#get-result-from-console
+
+
+### To use local coc-ember in your nvim
+
+These steps are handy for reporting issues
+
+* in `<coc-ember>`
+  * `yarn`
+  * `./scripts/prepublish.sh`
+  * `yarn link`
+* in `<your ember project>`
+  * either
+    * use your own configuration
+      * `cd ~/.config/coc/extensions && yarn link coc-ember`
+      * open nvim, don't update dependencies
+    * or use a minimal config
+      * `nvim -u <coc-ember>/docs/minimal-config.vim`
+      * `:PlugInstall`
+      * `cd ~/.config/coc/extensions && yarn link coc-ember`
+      * then back in your project: `nvim -u <coc-ember>/docs/minimal-config.vim`
+
