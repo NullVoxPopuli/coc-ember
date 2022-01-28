@@ -100,7 +100,7 @@
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "coc.nvim": "^0.0.80",
-    "eslint": "^8.7.0",
+    "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-decorator-position": "^4.0.1",
     "eslint-plugin-prettier": "^4.0.0",
