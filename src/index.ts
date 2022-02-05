@@ -1,5 +1,5 @@
-import {commands, LanguageClient, services, TransportKind, window, workspace} from 'coc.nvim';
-import {readdirSync} from 'fs';
+import { commands, LanguageClient, services, TransportKind, window, workspace } from 'coc.nvim';
+import { readdirSync } from 'fs';
 import path from 'path';
 
 import type {
@@ -64,7 +64,7 @@ async function startLanguageServerClient(context: ExtensionContext, isDebugging 
 
   console.info('UELS bin @', binPath);
 
-  let debugOptions = isDebugging ? {execArgv: ['--nolazy', '--inspect=6004']} : {};
+  let debugOptions = isDebugging ? { execArgv: ['--nolazy', '--inspect=6004'] } : {};
 
   // If the extension is launched in debug mode then the debug
   // server options are used...
@@ -107,7 +107,7 @@ function configureClient(client: LanguageClient, context: ExtensionContext) {
 
   commands.executeCommand(COMMANDS.SET_CONFIG, cocUELSConfig);
 
-  let {nvim} = workspace;
+  let { nvim } = workspace;
 
   context.subscriptions.push(
     commands.registerCommand(COMMANDS.GET_USER_INPUT, async (opts, callbackName, tail) => {
@@ -168,8 +168,13 @@ function getUELSConfig(): WorkspaceConfiguration {
 function buildClientOptions(): LanguageClientOptions {
   return {
     documentSelector: [
-      'hbs', 'html.handlebars', 'handlebars', 'typescript', 'javascript',
-      'typescript.glimmer', 'javascript.glimmer',
+      'hbs',
+      'html.handlebars',
+      'handlebars',
+      'typescript',
+      'javascript',
+      'typescript.glimmer',
+      'javascript.glimmer',
     ],
     initializationOptions: {
       editor: 'vscode', // hack
