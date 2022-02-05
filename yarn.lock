@@ -620,17 +620,17 @@
   dependencies:
     "@simple-dom/interface" "^1.4.0"
 
-"@glimmer/interfaces@0.73.2":
-  version "0.73.2"
-  resolved "https://registry.yarnpkg.com/@glimmer/interfaces/-/interfaces-0.73.2.tgz#03c769208bf705760800f3f64774b074bf04f738"
-  integrity sha512-SjV0/TtFiv+Sxl3WJ2I5oR6hH+EabTfk3qvllU8WAYBqf6LnNPSMjaFv2Fucn7bIvOqZ8zHl36q6HboAychD/A==
-  dependencies:
-    "@simple-dom/interface" "^1.4.0"
-
 "@glimmer/interfaces@0.82.0":
   version "0.82.0"
   resolved "https://registry.yarnpkg.com/@glimmer/interfaces/-/interfaces-0.82.0.tgz#e3f21e51a421b4c1ee34dcb682c719832f4a36f5"
   integrity sha512-Cdr2uWSNHBBf2fnm4QjkjHWgxGoT4SdrD+RDQBMwYWSaysqqsXYU3+toOLKFmaMJuyDa28Zeq17lCab7zOg43g==
+  dependencies:
+    "@simple-dom/interface" "^1.4.0"
+
+"@glimmer/interfaces@0.83.1":
+  version "0.83.1"
+  resolved "https://registry.yarnpkg.com/@glimmer/interfaces/-/interfaces-0.83.1.tgz#fb16f5f683ddc55f130887b6141f58c0751350fe"
+  integrity sha512-rjAztghzX97v8I4rk3+NguM3XGYcFjc/GbJ8qrEj19KF2lUDoDBW1sB7f0tov3BD5HlrGXei/vOh4+DHfjeB5w==
   dependencies:
     "@simple-dom/interface" "^1.4.0"
 
@@ -665,15 +665,15 @@
     "@handlebars/parser" "^1.1.0"
     simple-html-tokenizer "^0.5.10"
 
-"@glimmer/syntax@^0.73.1":
-  version "0.73.2"
-  resolved "https://registry.yarnpkg.com/@glimmer/syntax/-/syntax-0.73.2.tgz#76438633f26b3fccb86bd7d25390a901737aa530"
-  integrity sha512-neZvKpfJETtUxnZMdpmD9qi4E9WaKhnQt63H+0iHkz1APriIZM5rsq12oiG9MSCvEiF5iP3auwJMU22XKPtyeQ==
+"@glimmer/syntax@^0.83.1":
+  version "0.83.1"
+  resolved "https://registry.yarnpkg.com/@glimmer/syntax/-/syntax-0.83.1.tgz#7e18dd445871c157ba0281f12a4fbf316fa49b41"
+  integrity sha512-n3vEd0GtjtgkOsd2gqkSimp8ecqq5KrHyana/s1XJZvVAPD5rMWT9WvAVWG8XAktns8BxjwLIUoj/vkOfA+eHg==
   dependencies:
-    "@glimmer/interfaces" "0.73.2"
-    "@glimmer/util" "0.73.2"
-    "@handlebars/parser" "^2.0.0"
-    simple-html-tokenizer "^0.5.10"
+    "@glimmer/interfaces" "0.83.1"
+    "@glimmer/util" "0.83.1"
+    "@handlebars/parser" "~2.0.0"
+    simple-html-tokenizer "^0.5.11"
 
 "@glimmer/util@0.65.4":
   version "0.65.4"
@@ -684,15 +684,6 @@
     "@glimmer/interfaces" "0.65.4"
     "@simple-dom/interface" "^1.4.0"
 
-"@glimmer/util@0.73.2":
-  version "0.73.2"
-  resolved "https://registry.yarnpkg.com/@glimmer/util/-/util-0.73.2.tgz#32ca1cec339a91f12f0359711f1a86fc1dcc13ca"
-  integrity sha512-ng726SZl/o2NKOLeHdqU9LTH4tP9FW7H1CveZGE8HMTgTDpXA7NCF7TVHqccOMmJNXqspkegtGQFGOLi10HArg==
-  dependencies:
-    "@glimmer/env" "0.1.7"
-    "@glimmer/interfaces" "0.73.2"
-    "@simple-dom/interface" "^1.4.0"
-
 "@glimmer/util@0.82.0":
   version "0.82.0"
   resolved "https://registry.yarnpkg.com/@glimmer/util/-/util-0.82.0.tgz#d6ae4985f70343898d4b2297a4b3b1f5feda1934"
@@ -700,6 +691,15 @@
   dependencies:
     "@glimmer/env" "0.1.7"
     "@glimmer/interfaces" "0.82.0"
+    "@simple-dom/interface" "^1.4.0"
+
+"@glimmer/util@0.83.1":
+  version "0.83.1"
+  resolved "https://registry.yarnpkg.com/@glimmer/util/-/util-0.83.1.tgz#cc7511b03164d658cf6e3262fce5a0fcb82edceb"
+  integrity sha512-amvjtl9dvrkxsoitXAly9W5NUaLIE3A2J2tWhBWIL1Z6DOFotfX7ytIosOIcPhJLZCtiXPHzMutQRv0G/MSMsA==
+  dependencies:
+    "@glimmer/env" "0.1.7"
+    "@glimmer/interfaces" "0.83.1"
     "@simple-dom/interface" "^1.4.0"
 
 "@glimmer/validator@0.65.4", "@glimmer/validator@^0.65.0":
@@ -714,11 +714,6 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@handlebars/parser/-/parser-1.1.0.tgz#d6dbc7574774b238114582410e8fee0dc3532bdf"
   integrity sha512-rR7tJoSwJ2eooOpYGxGGW95sLq6GXUaS1UtWvN7pei6n2/okYvCGld9vsUTvkl2migxbkszsycwtMf/GEc1k1A==
-
-"@handlebars/parser@^2.0.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@handlebars/parser/-/parser-2.1.0.tgz#100e625d53c339e2b571c91fa93a455e93670fe2"
-  integrity sha512-R14NuNaSKZ6eE9y4t0fg/1f8iKd5ZJtSOTIseGFzXINTV17XffhLG2Y0CvdKOgyVQ7+UnXi89YGzRo/xsgwHIA==
 
 "@handlebars/parser@~2.0.0":
   version "2.0.0"
@@ -773,12 +768,12 @@
   dependencies:
     babel-traverse "^6.26.0"
 
-"@lifeart/ember-language-server@2.7.0":
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/@lifeart/ember-language-server/-/ember-language-server-2.7.0.tgz#c6cc6bb6b8d32d25725e254664e7090db9c583a4"
-  integrity sha512-2HgQlP+a6W0rCwyuVObUk5HublVOiCyoZV7w1ly6hb5Bz+FZe7lMPbQmebhKfQ11P+nGKK02jfjiwPf5+wiZEA==
+"@lifeart/ember-language-server@2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@lifeart/ember-language-server/-/ember-language-server-2.8.0.tgz#69e93d274b5031e1748b15853fcec410fec3324f"
+  integrity sha512-sAoSP/WwIWhR4izxcUOlKG1WtFnATg7lqDb6Z0CKZnzcCtC4fyrQEFNnwa2cFqTxcVBdgsGX/VOr2U6/A2yS8g==
   dependencies:
-    "@glimmer/syntax" "^0.73.1"
+    "@glimmer/syntax" "^0.83.1"
     "@lifeart/ember-extract-inline-templates" "2.1.0"
     ast-types "^0.14.2"
     dag-map "^2.0.2"
