@@ -1,3 +1,10 @@
+## [1.5.25](https://github.com/NullVoxPopuli/coc-ember/compare/v1.5.24...v1.5.25) (2022-02-05)
+
+
+### Bug Fixes
+
+* **client:** add gjs/gts to the documentSelector options ([fb704bb](https://github.com/NullVoxPopuli/coc-ember/commit/fb704bb4020505844d080f6de6b269b3bbc429ee))
+
 ## [1.5.24](https://github.com/NullVoxPopuli/coc-ember/compare/v1.5.23...v1.5.24) (2022-01-17)
 
 
