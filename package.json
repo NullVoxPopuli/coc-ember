@@ -87,10 +87,10 @@
     }
   },
   "devDependencies": {
-    "@babel/cli": "^7.17.0",
-    "@babel/core": "^7.17.2",
+    "@babel/cli": "^7.17.3",
+    "@babel/core": "^7.17.3",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/plugin-proposal-object-rest-spread": "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
     "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "@babel/preset-typescript": "^7.16.7",
     "@nullvoxpopuli/eslint-configs": "^2.1.23",
