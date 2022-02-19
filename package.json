@@ -93,7 +93,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
     "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "@babel/preset-typescript": "^7.16.7",
-    "@nullvoxpopuli/eslint-configs": "^2.1.23",
+    "@nullvoxpopuli/eslint-configs": "^2.1.24",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@types/node": "^16.11.25",
