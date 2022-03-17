@@ -1,3 +1,10 @@
+## [1.5.32](https://github.com/NullVoxPopuli/coc-ember/compare/v1.5.31...v1.5.32) (2022-03-17)
+
+
+### Bug Fixes
+
+* re-roll lockfile ([1f46644](https://github.com/NullVoxPopuli/coc-ember/commit/1f46644cdc240fec33e092adc32efe886bb032e4))
+
 ## [1.5.31](https://github.com/NullVoxPopuli/coc-ember/compare/v1.5.30...v1.5.31) (2022-02-26)
 
 
