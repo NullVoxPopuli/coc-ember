@@ -13,8 +13,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'joukevandermaas/vim-ember-hbs'
 
   " CoC / Intellisense
-  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-  Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -22,11 +21,9 @@ call plug#end()
 " CoC configuration
 """"""""""""""""""""""
 
-" Someday coc-ember will be in this list
-"  - auto updates
-"  - in Plug, updates are all manual
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
+  \ 'coc-ember',
   \ 'coc-css',
   \ 'coc-json',
   \ 'coc-html',
