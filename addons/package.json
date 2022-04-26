@@ -8,6 +8,6 @@
   "private": true,
   "devDependencies": {
     "els-a11y-addon": "^1.0.4",
-    "els-intl-addon": "^1.0.5"
+    "els-intl-addon": "^1.0.6"
   }
 }
