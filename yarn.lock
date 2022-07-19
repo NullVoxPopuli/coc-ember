@@ -2768,10 +2768,21 @@ eslint-module-utils@^2.7.3:
     debug "^3.2.7"
     find-up "^2.1.0"
 
-eslint-plugin-decorator-position@5.0.0, eslint-plugin-decorator-position@^5.0.0:
+eslint-plugin-decorator-position@5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-decorator-position/-/eslint-plugin-decorator-position-5.0.0.tgz#8f6f37f401f691634aa0ac26bb023e5e5d5aa357"
   integrity sha512-v9hhZgS34cOm4xPsI+UaDGcKolnsCqQYEBGJmjqhzgTDrOVlPhOZAT2u5GGnKFF7TqniLEQ8hU6F9lh8NGfTfw==
+  dependencies:
+    "@babel/core" "^7.18.6"
+    "@babel/plugin-proposal-decorators" "^7.18.6"
+    "@ember-data/rfc395-data" "^0.0.4"
+    ember-rfc176-data "^0.3.17"
+    snake-case "^3.0.4"
+
+eslint-plugin-decorator-position@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-decorator-position/-/eslint-plugin-decorator-position-5.0.1.tgz#17cfe02d60b86bbcf8d70c24b119849ef9ca7f07"
+  integrity sha512-2VI4qzKhdIvWR/+VIsIcUQLVS49E5/LNOKHccV+di23IqeY0JRTefjSAuHpsEjF/KTEciH2LVsxFltgV1/kw2w==
   dependencies:
     "@babel/core" "^7.18.6"
     "@babel/plugin-proposal-decorators" "^7.18.6"
