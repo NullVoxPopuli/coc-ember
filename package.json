@@ -96,7 +96,7 @@
     "@nullvoxpopuli/eslint-configs": "^2.2.43",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^16.11.45",
+    "@types/node": "^16.11.46",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "@typescript-eslint/parser": "^5.31.0",
     "coc.nvim": "^0.0.81",
