@@ -6094,10 +6094,10 @@ safe-buffer@~5.2.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release@^20.0.1:
-  version "20.0.1"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-20.0.1.tgz#247a4098ffc99cb69725bf3638e30550f2644118"
-  integrity sha512-v3EYBMn3nGjpRrEiPrYMMwMD7iCqCqwG1F+g2MOpawFwbc/X4kNDbDDnZgHY8F6iU+o8KwW2uvF8/BdMFKzrYw==
+semantic-release@^20.0.2:
+  version "20.0.2"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-20.0.2.tgz#e0344c264832e8ebffb5a92ecbf21a8e60efbb4a"
+  integrity sha512-K6TYMAnSUqM2oH0/0ZJErMzkx4SgV2dM8jh5RNGj1ANJ81z/u5XVaPPCZADAl7voEf6t2hd6YioLd0I6yXui2A==
   dependencies:
     "@semantic-release/commit-analyzer" "^9.0.2"
     "@semantic-release/error" "^3.0.0"
@@ -6124,16 +6124,16 @@ semantic-release@^20.0.1:
     read-pkg-up "^9.1.0"
     resolve-from "^5.0.0"
     semver "^7.3.2"
-    semver-diff "^3.1.1"
+    semver-diff "^4.0.0"
     signale "^1.2.1"
     yargs "^17.5.1"
 
-semver-diff@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/semver-diff/-/semver-diff-3.1.1.tgz#05f77ce59f325e00e2706afd67bb506ddb1ca32b"
-  integrity sha512-GX0Ix/CJcHyB8c4ykpHGIAvLyOwOobtM/8d+TQkAd81/bEjgPHrfba41Vpesr7jX/t8Uh+R3EX9eAS5be+jQYg==
+semver-diff@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/semver-diff/-/semver-diff-4.0.0.tgz#3afcf5ed6d62259f5c72d0d5d50dffbdc9680df5"
+  integrity sha512-0Ju4+6A8iOnpL/Thra7dZsSlOHYAHIeMxfhWQRI1/VLcT3WDBZKKtQt/QkBOsiIN9ZpuvHE6cGZ0x4glCMmfiA==
   dependencies:
-    semver "^6.3.0"
+    semver "^7.3.5"
 
 semver-regex@^4.0.5:
   version "4.0.5"
