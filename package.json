@@ -115,7 +115,7 @@
     "@lifeart/ember-language-server": "2.28.0"
   },
   "volta": {
-    "node": "18.14.1",
+    "node": "18.14.2",
     "yarn": "1.22.19"
   }
 }
