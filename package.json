@@ -107,7 +107,7 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "prettier": "^2.8.7",
     "rimraf": "^4.4.1",
-    "semantic-release": "^21.0.0",
+    "semantic-release": "^21.0.1",
     "typescript": "^5.0.3",
     "vscode-languageserver-protocol": "^3.17.3"
   },
