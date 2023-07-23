@@ -29,7 +29,7 @@ jobs:
     #   run: yarn lint:hbs
     - name: Types
       run: yarn tsc --noEmit --skipLibCheck
-    - uses: wagoid/commitlint-github-action@v5.4.2
+    - uses: wagoid/commitlint-github-action@v5.4.3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
