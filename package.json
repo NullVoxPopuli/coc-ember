@@ -109,7 +109,7 @@
     "rimraf": "^5.0.4",
     "semantic-release": "^22.0.5",
     "typescript": "^5.2.2",
-    "vscode-languageserver-protocol": "^3.17.4"
+    "vscode-languageserver-protocol": "^3.17.5"
   },
   "dependencies": {
     "@lifeart/ember-language-server": "2.29.0"
