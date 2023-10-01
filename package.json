@@ -112,7 +112,7 @@
     "vscode-languageserver-protocol": "^3.17.5"
   },
   "dependencies": {
-    "@lifeart/ember-language-server": "2.29.0"
+    "@lifeart/ember-language-server": "2.30.0"
   },
   "volta": {
     "node": "18.18.0",
