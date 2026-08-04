@@ -9,7 +9,7 @@ import type {
   WorkspaceConfiguration,
 } from 'coc.nvim';
 
-const languageServerPath = ['node_modules', '@lifeart', 'ember-language-server'];
+const languageServerPath = ['node_modules', '@ember-tooling', 'ember-language-server'];
 const serverBin = ['lib', 'start-server.js'];
 const addonPath = ['lib', 'addons'];
 

@@ -1,6 +1,6 @@
 # ember language server extension
 
-> [ember-language-server](https://github.com/lifeart/ember-language-server) extension for [coc.nvim](https://github.com/neoclide/coc.nvim)
+> [ember-language-server](https://github.com/ember-tooling/ember-language-server) extension for [coc.nvim](https://github.com/neoclide/coc.nvim)
 
 ## Install
 

@@ -18,12 +18,12 @@ cd $tmpDir
 
 
 if [ ! -d "ember-language-server" ]; then
-  git clone https://github.com/lifeart/ember-language-server.git
+  git clone https://github.com/ember-tooling/ember-language-server.git
 fi
 
 cd ember-language-server
-# git checkout is a no-op if we are already on that branch
-git checkout component-context-info-origin
+# git checkout is a no-op if we are already on that version
+git checkout v2.30.9
 # yarn also compiles
 yarn
 
